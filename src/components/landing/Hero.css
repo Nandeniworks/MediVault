@@ -1,0 +1,478 @@
+.hero {
+  position: relative;
+  padding: 8rem 0 6rem 0;
+  overflow: hidden;
+}
+
+.hero-glow-1 {
+  top: -10%;
+  left: 20%;
+}
+
+.hero-glow-2 {
+  bottom: 10%;
+  right: 10%;
+  background: radial-gradient(circle, rgba(184, 165, 255, 0.08) 0%, rgba(9, 8, 13, 0) 70%) !important;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-badge-row {
+  display: flex;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-lavender);
+  background: rgba(184, 165, 255, 0.08);
+  border: 1px solid rgba(184, 165, 255, 0.15);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-badge-icon {
+  color: var(--accent-lavender);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.hero-metadata {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.metadata-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.metadata-check {
+  color: var(--accent-mint);
+}
+
+/* Floating UI Preview Grid */
+.hero-preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 480px;
+  width: 100%;
+}
+
+.hero-preview-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.preview-element {
+  position: absolute;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-medium);
+  backdrop-filter: blur(8px);
+}
+
+/* Health ID Card positioning */
+.health-id-card {
+  width: 250px;
+  top: 10px;
+  left: 20px;
+  z-index: 10;
+  background: rgba(18, 16, 25, 0.85);
+}
+
+.id-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.id-card-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.id-card-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.user-avatar-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--grad-premium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.user-dob {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.id-card-footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.75rem;
+  gap: 0.15rem;
+}
+
+.vault-id-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.vault-id-val {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-lavender);
+}
+
+/* Clinical Report Card positioning */
+.report-card {
+  width: 220px;
+  top: 190px;
+  left: 0px;
+  z-index: 15;
+  background: rgba(26, 23, 37, 0.9);
+}
+
+.report-card-top {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.report-icon-wrapper {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 235, 212, 0.08);
+  color: var(--accent-mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.report-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.report-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.report-source {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.report-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 0.5rem;
+}
+
+.report-date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Access Request Popup Card positioning */
+.request-card {
+  width: 280px;
+  top: 80px;
+  right: 10px;
+  z-index: 20;
+  background: rgba(18, 16, 25, 0.9);
+}
+
+.request-header {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.request-alert-icon {
+  color: var(--accent-lavender);
+}
+
+.request-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.request-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.request-details {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.details-label {
+  color: var(--text-secondary);
+}
+
+.details-val {
+  font-weight: 600;
+}
+
+.request-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.req-btn {
+  flex: 1;
+  padding: 0.45rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.req-btn-deny {
+  background: transparent;
+  border-color: var(--border-medium);
+  color: var(--text-secondary);
+}
+
+.req-btn-deny:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.req-btn-allow {
+  background: var(--grad-premium);
+  color: #fff;
+}
+
+.req-btn-allow:hover {
+  box-shadow: 0 0 10px rgba(124, 93, 250, 0.3);
+}
+
+/* Timeline Card positioning */
+.timeline-card {
+  width: 240px;
+  bottom: 30px;
+  right: 60px;
+  z-index: 12;
+  background: rgba(18, 16, 25, 0.85);
+}
+
+.timeline-node {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.timeline-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-mint);
+  margin-top: 0.35rem;
+  box-shadow: 0 0 8px var(--accent-mint);
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.timeline-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.timeline-sub {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.timeline-date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Responsive configurations */
+@media (max-width: 1100px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-text-block {
+    text-align: center;
+    align-items: center;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-metadata {
+    justify-content: center;
+  }
+  .hero-preview-container {
+    height: 430px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .health-id-card {
+    width: 220px;
+    left: 10px;
+  }
+  .report-card {
+    width: 200px;
+    top: 180px;
+    left: -10px;
+  }
+  .request-card {
+    width: 250px;
+    right: 10px;
+    top: 60px;
+  }
+  .timeline-card {
+    width: 220px;
+    bottom: 20px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 6rem;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .hero-actions button, .hero-actions a {
+    width: 100%;
+  }
+  .hero-preview-container {
+    height: 380px;
+  }
+  .health-id-card {
+    width: 180px;
+    top: 10px;
+  }
+  .request-card {
+    width: 210px;
+    right: 0px;
+    top: 50px;
+    padding: 0.75rem;
+  }
+  .report-card {
+    width: 170px;
+    top: 190px;
+  }
+  .timeline-card {
+    width: 180px;
+    bottom: 10px;
+    right: 10px;
+  }
+}

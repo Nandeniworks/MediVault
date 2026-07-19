@@ -1,233 +1,153 @@
-<div align="center">
+# 🛡️ MediVault
 
-# 🏥 MediVault
+### *"Your Lifetime Medical History. One Secure Vault."*
 
-### *Your Lifetime Medical History. One Secure Vault.*
-
-<p align="center">
-A modern AI-powered digital health record platform that gives patients complete ownership of their medical history while enabling secure, permission-based access for healthcare professionals.
-</p>
-
-<br>
-
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38BDF8?style=for-the-badge&logo=tailwind-css)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase)
-![Gemini AI](https://img.shields.io/badge/Gemini-AI-8E75FF?style=for-the-badge)
-
-</div>
+MediVault is a next-generation, patient-controlled, highly secure digital vault designed to aggregate, encrypt, and share your lifetime medical history. Built to replace fragmented, fragile, and siloed health records, MediVault gives individuals complete ownership over their health records while streamlining authorized provider access.
 
 ---
 
-# 📖 About
-
-**MediVault** is an AI-powered digital healthcare platform that centralizes a patient's complete medical history into one secure, lifelong vault.
-
-Instead of repeating medical tests whenever a patient changes hospitals or doctors, MediVault enables patients to securely store, organize, and share their health records with authorized healthcare professionals.
-
-Every report, prescription, scan, laboratory result, and medical document becomes part of a unified medical timeline that follows the patient throughout their life.
-
----
-
-# The Problem
-
-Millions of patients lose access to their medical history because healthcare records remain fragmented across hospitals, clinics, and diagnostic centers.
-
-As a result:
-
-- 🩺 Medical tests are unnecessarily repeated
-- ⏳ Treatment is delayed
-- 💰 Healthcare costs increase
-- 📂 Patients struggle to manage years of reports
-- 🏥 Hospitals lack previous clinical context
+## 📌 Table of Contents
+- [Problem Statement](#-problem-statement)
+- [Solution](#-solution)
+- [Core Features](#-core-features)
+  - [AI Features](#ai-features)
+  - [Patient Workspace](#patient-workspace)
+  - [Doctor Workspace](#doctor-workspace)
+- [Tech Stack](#%EF%B8%8F-tech-stack)
+- [Folder Structure](#-folder-structure)
+- [Installation Guide](#%EF%B8%8F-installation-guide)
+- [Screenshots & Demo](#-screenshots--demo)
+- [Future Scope](#-future-scope)
+- [Deployment Instructions](#%EF%B8%8F-deployment-instructions)
+- [Contributors](#-contributors)
+- [License](#-license)
 
 ---
 
-# Our Solution
-
-MediVault creates a **patient-owned digital medical identity**.
-
-Patients upload every new medical report only once.
-
-Doctors receive secure, permission-based access to the patient's complete medical history without requiring unnecessary repeat investigations.
+## ❓ Problem Statement
+Modern healthcare suffers from fragmented medical records. A patient’s history is scattered across different hospitals, primary care clinics, labs, and pharmacies. 
+- **Fragmented Data**: Patients cannot access their full medical history in one unified interface.
+- **Security & Privacy Risks**: Centralized hospital servers are high-value targets for cyberattacks, and patient consent is rarely enforced programmatically.
+- **Inefficient Sharing**: Passing reports to a new doctor often requires printing, scanning, or repeating diagnostic tests, leading to massive financial waste and delayed care.
 
 ---
 
-# ✨ Core Features
-
-## Patient Workspace
-
-- Secure Authentication
-- Health Vault
-- Medical Timeline
-- Test History
-- Health Analytics
-- Medication Management
-- Allergy Tracking
-- Medical Passport
-- Profile Management
-- Activity Logs
-- Secure Report Upload
-- PDF & Image Support
+## 💡 Solution
+**MediVault** addresses these limitations by placing the patient at the absolute center of their healthcare ecosystem:
+- **Unified Medical Vault**: A single digital space to aggregate reports, allergy profiles, medications, and test histories.
+- **Granular Consent Controls**: Patients explicitly approve or revoke time-bound access requests from doctors before records are decrypted.
+- **Digital Health Card**: Every patient receives a unique Digital Health ID and card for instant authorization.
 
 ---
 
-##  Doctor Workspace
+## 🚀 Core Features
 
-- Doctor Authentication
-- Secure Patient Search
-- Access Request Workflow
-- Medical Timeline Viewer
-- Report Viewer
-- AI Medical Summary
-- Activity Logs
-- Temporary Permission-Based Access
+### 🧠 AI Features
+- **Smart Report Analyzer**: Automatically extract key metrics from uploaded lab reports, translate medical jargon into plain English, and flag out-of-range biomarkers.
+- **Health Assistant**: Provides conversational summaries of historical records, suggesting patterns or highlights for patient review.
 
----
+### 👤 Patient Workspace
+- **Personal Profile**: Manage vital metrics, emergency contacts, and personal health declarations.
+- **Medical Passport**: A travel-ready, quickly exportable compilation of vaccines, active issues, allergies, and medications.
+- **Consent Manager**: Real-time request feed where patients can view, approve, or reject access requests from registered doctors.
+- **Vault & Records**: Chronological view of uploaded health files categorized by type (Lab Report, Prescription, Imaging, vaccine proof) with instant filtering.
 
-## AI Features
-
-- Medical Report Summarization
-- Intelligent Report Categorization
-- Timeline Generation
-- Key Finding Extraction
-- Clinical Insight Generation
-- Health History Organization
+### 🩺 Doctor Workspace
+- **Doctor Onboarding**: Registered doctors complete details including license ID, specialization, and hospital affiliation.
+- **Search Vaults**: Query and request access to a patient's vault using their unique Digital Health ID.
+- **Interactive Review**: View approved patient records, prescription timelines, analytics, and test histories inside a unified timeline.
 
 ---
 
-#  Security Features
-
-- Patient-controlled access
-- Permission-based record sharing
-- Activity logging
-- Secure document storage
-- Temporary doctor access
-- Medical record verification
-- QR Verification Ready
+## 🛠️ Tech Stack
+- **Frontend Core**: React 19, TypeScript, Vite
+- **Styling**: Vanilla CSS (Custom design system, sleek dark mode, fluid micro-animations, premium glassmorphism layout)
+- **Icons**: Lucide React
+- **Storage & State**: React Context API, LocalStorage (Mocked persistent backend database API simulating security boundaries)
 
 ---
 
-#  Tech Stack
-
-## Frontend
-
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Router
-- Lucide React
-- Framer Motion
-
-## Backend
-
-- Firebase Authentication
-- Cloud Firestore
-- Firebase Storage
-
-## AI
-
-- Google Gemini API
-
-## Deployment
-
-- Vercel
-
----
-
-#  Project Structure
-
-```bash
-src/
-│
-├── components/
-├── pages/
-│   ├── Patient/
-│   ├── Doctor/
-│   └── Authentication/
-│
-├── services/
-├── hooks/
-├── contexts/
-├── utils/
-├── assets/
-└── types/
-```
-
-#  Workflow
+## 📁 Folder Structure
 
 ```text
-Patient Uploads Report
-            │
-            ▼
-AI Extracts Important Information
-            │
-            ▼
-Health Vault Updates
-            │
-            ▼
-Medical Timeline Updates
-            │
-            ▼
-Doctor Requests Access
-            │
-            ▼
-Patient Approves
-            │
-            ▼
-Doctor Reviews Medical History
+MediVault/
+├── public/                 # Static assets
+├── src/
+│   ├── assets/             # Images and styles
+│   ├── components/         # Reusable React components
+│   │   ├── common/         # Buttons, Modals, Badges, Input fields
+│   │   ├── doctor/         # Doctor dashboard elements
+│   │   ├── landing/        # Hero, Audiences, HowItWorks, ConsentFlow sections
+│   │   └── patient/        # Vaults, HealthCard, Records, Profile
+│   ├── context/            # Auth & Routing state provider (RouterContext.tsx)
+│   ├── pages/              # Onboarding, Workspace, Landing, and Auth pages
+│   ├── services/           # Data services (Auth, Patient, Vault, Consent)
+│   ├── App.tsx             # Main entry point & routing switch
+│   └── main.tsx            # React DOM mounting
+├── package.json            # Configuration and dependencies
+├── tsconfig.json           # TypeScript configuration
+└── vite.config.ts          # Vite configuration
 ```
 
 ---
 
-#  Future Scope
+## ⚡️ Installation Guide
 
-- DICOM Image Viewer
-- Emergency Access Mode
-- QR-based Medical Passport
-- OCR for Paper Reports
-- Appointment Integration
-- Wearable Device Integration
-- ABHA Integration
-- Multi-language Support
+Follow these steps to run MediVault locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Nandeniworks/MediVault.git
+   cd MediVault
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**:
+   Navigate to `http://localhost:5173`.
 
 ---
 
-#  Getting Started
+## 📸 Screenshots & Demo
 
+### Screenshots
+*Place workspace screenshots here after deployment (e.g. Patient Vault, Doctor Workspace, Consent Request).*
+
+### Demo
+*Interactive demo link will be available at standard hosting providers.*
+
+---
+
+## 🔮 Future Scope
+- **Blockchain Verification**: Leverage decentralized ledger technology to seal health records, ensuring tamper-proof logs of consent.
+- **Biometric Authentication**: FaceID and fingerprint credentials for quick consent approvals directly from mobile devices.
+- **Wearable Integration**: Stream real-time vitals (heart rate, blood glucose, sleep metrics) from Apple HealthKit and Fitbit.
+
+---
+
+## 📦 Deployment Instructions
+
+### Production Build
+To build the project for production, run:
 ```bash
-git clone https://github.com/yourusername/medivault.git
-
-cd medivault
-
-npm install
-
-npm run dev
+npm run build
 ```
+This outputs compiled, optimized assets to the `dist/` directory, which can be deployed to Vercel, Netlify, Firebase Hosting, or GitHub Pages.
 
 ---
 
-# Made by
-
-- **Nandeni Tiwari**
-
----
-
-# Why MediVault?
-
-Healthcare records should belong to **patients**, not hospitals.
-
-MediVault empowers individuals with lifelong ownership of their medical history while enabling seamless collaboration between patients and healthcare providers.
+## 👥 Contributors
+- **Nandeniworks** (Project Creator & Developer)
 
 ---
 
-<div align="center">
-
-### If you like this project, consider giving it a star!
-
-*"One Patient. One Lifetime. One Vault."*
-
-</div>
+## 📄 License
+This project is licensed under the MIT License.

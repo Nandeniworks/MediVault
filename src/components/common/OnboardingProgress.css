@@ -1,0 +1,101 @@
+.progress-indicator-container {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.progress-steps-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.progress-step-circle-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+  position: relative;
+  flex: 1;
+}
+
+.step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-surface-tertiary);
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.step-title-text {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-align: center;
+  transition: color var(--transition-normal);
+}
+
+/* Active Step */
+.progress-step-circle-wrap.active .step-circle {
+  background: var(--accent-violet);
+  border-color: var(--accent-lavender);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(124, 93, 250, 0.4);
+}
+
+.progress-step-circle-wrap.active .step-title-text {
+  color: var(--accent-lavender);
+}
+
+/* Completed Step */
+.progress-step-circle-wrap.completed .step-circle {
+  background: rgba(0, 235, 212, 0.08);
+  border-color: var(--accent-mint);
+  color: var(--accent-mint);
+  box-shadow: 0 0 12px rgba(0, 235, 212, 0.15);
+}
+
+.progress-step-circle-wrap.completed .step-title-text {
+  color: var(--text-secondary);
+}
+
+/* Connector Lines */
+.progress-step-connector {
+  height: 2px;
+  background: var(--border-medium);
+  flex-grow: 1;
+  margin: 0 -1.5rem;
+  z-index: 1;
+  margin-top: -1.25rem; /* Align vertically with circle center */
+  transition: background-color var(--transition-normal);
+}
+
+.progress-step-connector.active {
+  background: linear-gradient(to right, var(--accent-violet), var(--accent-mint));
+}
+
+@media (max-width: 576px) {
+  .step-title-text {
+    display: none; /* Hide titles on small screens to prevent overlap */
+  }
+  .progress-step-connector {
+    margin: 0 -0.5rem;
+    margin-top: 0;
+  }
+  .progress-steps-row {
+    align-items: center;
+  }
+}

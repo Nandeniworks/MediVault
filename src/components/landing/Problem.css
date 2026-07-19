@@ -1,0 +1,342 @@
+.problem-section {
+  position: relative;
+  padding: 6rem 0;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 4rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Flowchart Nodes */
+.flowchart-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.flowchart-node {
+  flex: 1;
+  background: var(--bg-main) !important;
+  border: 1px solid var(--border-medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  min-height: 260px;
+}
+
+.node-badge-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.75rem;
+}
+
+.node-num {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent-lavender);
+}
+
+.node-site {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.node-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.node-description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.node-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem;
+}
+
+.node-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.node-item-icon {
+  color: var(--accent-lavender);
+}
+
+.node-barrier-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-warning);
+  background: rgba(245, 158, 11, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  justify-content: center;
+}
+
+.node-actions-err {
+  background: rgba(244, 63, 94, 0.05);
+  border: 1px solid rgba(244, 63, 94, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.node-error-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-danger);
+}
+
+/* Connectors */
+.flowchart-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.connector-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--border-medium) 0, var(--border-medium) 6px, transparent 6px, transparent 12px);
+  z-index: 1;
+}
+
+.connector-badge {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+.badge-err {
+  background: rgba(244, 63, 94, 0.1);
+  border-color: rgba(244, 63, 94, 0.2);
+  color: var(--color-danger);
+}
+
+.badge-warn {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(245, 158, 11, 0.2);
+  color: var(--color-warning);
+}
+
+.connector-arrow {
+  position: relative;
+  z-index: 2;
+  color: var(--text-muted);
+}
+
+.animate-spin-slow {
+  animation: spinner-rotate 8s linear infinite;
+}
+
+/* Solution Box */
+.solution-bridge-box {
+  background: var(--bg-main);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2rem;
+}
+
+.solution-glow {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 235, 212, 0.1) 0%, transparent 70%);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.solution-card-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.solution-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.solution-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 235, 212, 0.08);
+  border: 1px solid rgba(0, 235, 212, 0.2);
+  box-shadow: 0 0 15px rgba(0, 235, 212, 0.15);
+}
+
+.solution-title-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.solution-description-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 880px;
+  font-size: 0.95rem;
+}
+
+.solution-highlights {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.sol-highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.text-mint {
+  color: var(--accent-mint);
+}
+
+/* Clinical Disclaimer Callout */
+.clinical-disclaimer-callout {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.disclaimer-icon-alert {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.clinical-disclaimer-copy {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Responsive configurations */
+@media (max-width: 992px) {
+  .flowchart-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .flowchart-node {
+    min-height: auto;
+  }
+  .flowchart-connector {
+    width: 100%;
+    height: 60px;
+  }
+  .connector-line {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(180deg, var(--border-medium) 0, var(--border-medium) 6px, transparent 6px, transparent 12px);
+  }
+  .connector-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .solution-bridge-box {
+    padding: 1.5rem;
+  }
+  .solution-title-text {
+    font-size: 1.2rem;
+  }
+  .solution-highlights {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

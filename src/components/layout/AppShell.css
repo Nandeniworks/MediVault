@@ -1,0 +1,106 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-main);
+  background-image: var(--grad-hero);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding-top: 76px; /* Offset fixed header */
+  position: relative;
+  z-index: 1;
+}
+
+/* Modal Form Styles */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modal-form-intro {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+
+.modal-form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.form-submit-btn {
+  flex-grow: 1;
+}
+
+.modal-security-assurance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  justify-content: center;
+  margin-top: 0.25rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1rem;
+}
+
+.security-assurance-icon {
+  color: var(--accent-mint);
+}
+
+/* Modal Success Screen Styles */
+.modal-success-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.success-icon-container {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: var(--color-success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+}
+
+.success-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.success-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 380px;
+  margin-bottom: 1.5rem;
+}
+
+.success-badge-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.success-close {
+  width: 100%;
+}

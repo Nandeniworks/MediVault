@@ -1,0 +1,257 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.form-label {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}
+
+.input-relative {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-prefix {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-input, .form-select {
+  width: 100%;
+  background: var(--bg-surface-tertiary);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.form-input.with-prefix, .form-select.with-prefix {
+  padding-left: 2.75rem;
+}
+
+.form-input.with-suffix {
+  padding-right: 2.75rem;
+}
+
+.form-input:hover, .form-select:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.form-input:focus, .form-select:focus {
+  border-color: var(--accent-lavender);
+  box-shadow: 0 0 12px rgba(184, 165, 255, 0.08);
+  background: rgba(18, 16, 25, 0.5);
+}
+
+/* Password Toggle Suffix */
+.password-toggle-btn {
+  position: absolute;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+.password-toggle-btn:hover {
+  color: var(--text-primary);
+}
+
+/* Form Error text */
+.form-error-text {
+  font-size: 0.78rem;
+  color: var(--color-danger);
+  margin-top: 0.15rem;
+}
+
+.has-error .form-input, .has-error .form-select {
+  border-color: rgba(244, 63, 94, 0.35);
+}
+
+.has-error .form-input:focus, .has-error .form-select:focus {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 12px rgba(244, 63, 94, 0.08);
+}
+
+/* Checkbox Styling */
+.form-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.checkbox-label-container {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-hidden {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox-custom-box {
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--border-medium);
+  border-radius: 4px;
+  background: var(--bg-surface-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.checkbox-hidden:checked ~ .checkbox-custom-box {
+  background: var(--accent-mint);
+  border-color: var(--accent-mint);
+}
+
+.checkbox-custom-box::after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 9px;
+  border: solid #09080d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-hidden:checked ~ .checkbox-custom-box::after {
+  display: block;
+}
+
+.checkbox-hidden:focus-visible ~ .checkbox-custom-box {
+  outline: 2px solid var(--accent-lavender);
+  outline-offset: 2px;
+}
+
+.checkbox-label-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.checkbox-err {
+  margin-left: 1.75rem;
+}
+
+/* Password Strength Bar */
+.password-strength-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.45rem;
+  gap: 1rem;
+}
+
+.strength-bars {
+  display: flex;
+  gap: 0.25rem;
+  flex-grow: 1;
+}
+
+.strength-bar {
+  height: 4px;
+  background: var(--border-medium);
+  border-radius: var(--radius-full);
+  flex: 1;
+  transition: background-color var(--transition-fast);
+}
+
+.strength-label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.strength-weak {
+  color: var(--color-danger);
+}
+.strength-bar.strength-weak {
+  background-color: var(--color-danger);
+}
+
+.strength-medium {
+  color: var(--color-warning);
+}
+.strength-bar.strength-medium {
+  background-color: var(--color-warning);
+}
+
+.strength-strong {
+  color: var(--color-success);
+}
+.strength-bar.strength-strong {
+  background-color: var(--color-success);
+}
+
+/* Alert Cards */
+.form-alert-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  width: 100%;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.alert-message {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.alert-error {
+  background: rgba(244, 63, 94, 0.05);
+  border-color: rgba(244, 63, 94, 0.15);
+  color: var(--color-danger);
+}
+
+.alert-success {
+  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.15);
+  color: var(--color-success);
+}

@@ -1,0 +1,83 @@
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+  box-shadow: var(--shadow-md);
+}
+
+.card-pad-none {
+  padding: 0;
+}
+.card-pad-sm {
+  padding: 1rem;
+}
+.card-pad-md {
+  padding: 1.5rem;
+}
+.card-pad-lg {
+  padding: 2.25rem;
+}
+
+.card-content-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* Static ambient glow */
+.card-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(124, 93, 250, 0.08) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hover effects */
+.card-hoverable:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184, 165, 255, 0.18);
+  box-shadow: var(--shadow-lg), 0 0 20px rgba(124, 93, 250, 0.03);
+}
+
+/* Interactive Cursor Glowing (similar to premium modern cards) */
+.card-interactive::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--grad-card-glow);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.card-interactive:hover::after {
+  opacity: 1;
+}
+
+.card-border-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity var(--transition-normal);
+}

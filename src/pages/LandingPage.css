@@ -1,0 +1,99 @@
+.landing-page {
+  position: relative;
+  width: 100%;
+}
+
+/* Final CTA Banner Section */
+.final-cta-section {
+  position: relative;
+  padding: 8rem 0;
+  overflow: hidden;
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-main);
+}
+
+.final-cta-glow {
+  bottom: -20%;
+  left: 30%;
+}
+
+.final-cta-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.final-cta-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 4rem 3rem;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: var(--shadow-lg), 0 0 50px rgba(124, 93, 250, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.final-cta-title {
+  font-size: 2.8rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.final-cta-desc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 580px;
+  margin-bottom: 0.5rem;
+}
+
+.final-cta-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.final-cta-footer {
+  margin-top: 0.5rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.info-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .final-cta-section {
+    padding: 6rem 0;
+  }
+  .final-cta-card {
+    padding: 3rem 1.5rem;
+  }
+  .final-cta-title {
+    font-size: 2rem;
+  }
+  .final-cta-desc {
+    font-size: 0.95rem;
+  }
+  .final-cta-actions {
+    width: 100%;
+  }
+  .final-cta-actions button {
+    width: 100%;
+  }
+}

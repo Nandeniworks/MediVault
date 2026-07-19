@@ -1,0 +1,83 @@
+.verification-callout-box {
+  display: flex;
+  gap: 1rem;
+  background: rgba(245, 158, 11, 0.03);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+}
+
+.callout-text-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.callout-text-details .title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.callout-text-details .status-label {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-warning);
+  letter-spacing: 0.05em;
+  background: rgba(245, 158, 11, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  align-self: flex-start;
+}
+
+.callout-text-details .desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Compliance Principles List */
+.principles-list-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: rgba(255,255,255,0.01);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.principles-list-box .principle-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.principle-icon-lock {
+  color: var(--accent-lavender);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.principles-list-box .text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.principles-list-box .bold {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.principles-list-box .desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
